@@ -20,6 +20,7 @@ BuildRequires:  cmake(KF5KDELibs4Support)
 BuildRequires:  python-devel
 BuildRequires:  qt5-qtbase-devel
 BuildRequires:  pkgconfig(Qt5Qml)
+BuildRequires:  pkgconfig(Qt5X11Extras)
 
 
 %description
