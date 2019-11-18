@@ -1,3 +1,5 @@
+%define _disable_lto 1
+
 Name:           nx-firewall
 Version:        0.4.1
 Release:        0.git.2019.11.18
