@@ -1,4 +1,5 @@
 %define _disable_lto 1
+%global CFLAGS="%{optflags} -Wno-error=inconsistent-missing-override"
 
 Name:           nx-firewall
 Version:        0.4.1
@@ -33,8 +34,8 @@ nx-firewall is a small and easy to use KCM Firewall for Plasma 5.
 %autopatch -p1
 
 %build
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %cmake  -DCMAKE_BUILD_TYPE=Release \
         -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
         
