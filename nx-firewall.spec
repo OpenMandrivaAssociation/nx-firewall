@@ -1,5 +1,5 @@
 %define _disable_lto 1
-%global CFLAGS="%{optflags} -Wno-error=inconsistent-missing-override"
+#global CFLAGS="%{optflags} -Wno-error=inconsistent-missing-override"
 
 Name:           nx-firewall
 Version:        0.4.1
@@ -34,6 +34,9 @@ nx-firewall is a small and easy to use KCM Firewall for Plasma 5.
 %autopatch -p1
 
 %build
+export CFLAGS="$RPM_OPT_FLAGS -Wno-error=deprecated-declarations"
+export CFLAGS="$RPM_OPT_FLAGS -Wno-error=inconsistent-missing-override"
+
 #export CC=gcc
 #export CXX=g++
 %cmake  -DCMAKE_BUILD_TYPE=Release \
