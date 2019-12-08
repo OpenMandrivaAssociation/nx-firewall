@@ -49,10 +49,10 @@ export CFLAGS="$RPM_OPT_FLAGS -Wno-error=inconsistent-missing-override"
 
 
 %files
-%{_libexecdir}/__pycache__/nomad_ufw_plugin_helper.cpython-37.pyc
-%{_libexecdir}/kauth/nomad_ufw_plugin_helper
-%{_libexecdir}/kauth/nxos_netstat_helper
-%{_libexecdir}/nomad_ufw_plugin_helper.py
+%{_libdir}/libexec/__pycache__/nomad_ufw_plugin_helper.cpython-37.pyc
+%{_libdir}/libexec/kauth/nomad_ufw_plugin_helper
+%{_libdir}/libexec/kauth/nxos_netstat_helper
+%{_libdir}/libexec/nomad_ufw_plugin_helper.py
 %{_libdir}/qt5/plugins/kcms/org.nxos.firewall.so
 %{_libdir}/qt5/qml/org/nomad/netstat/libnomad_netstat_plugin.so
 %{_libdir}/qt5/qml/org/nomad/netstat/qmldir
