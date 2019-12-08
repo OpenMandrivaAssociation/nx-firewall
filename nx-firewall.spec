@@ -10,6 +10,7 @@ License:        GPLv3+
 URL:            https://github.com/nx-desktop/nx-firewall
 #Source:         https://github.com/nx-desktop/nx-firewall/archive/%{version}/%{name}-%{version}.tar.gz
 Source0:        %{name}-master-2019.11.18.zip
+Patch0:         nx-firewall-werror.patch
 
 BuildRequires:  cmake
 BuildRequires:	cmake(ECM)
@@ -31,7 +32,7 @@ nx-firewall is a small and easy to use KCM Firewall for Plasma 5.
 
 %prep
 %setup -qn %{name}-master
-%autopatch -p1
+%autopatch -p0
 
 %build
 export CFLAGS="$RPM_OPT_FLAGS -Wno-error=deprecated-declarations"
