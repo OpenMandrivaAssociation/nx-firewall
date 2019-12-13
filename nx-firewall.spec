@@ -1,8 +1,8 @@
-%define _disable_lto 1
+#define _disable_lto 1
 
 Name:           nx-firewall
 Version:        0.4.1
-Release:        0.git.2019.11.18
+Release:        1.git.2019.11.18
 Summary:        Plasma 5 Firewall KCM
 Group:          System/Base
 License:        GPLv3+
@@ -25,7 +25,6 @@ BuildRequires:  qt5-qtbase-devel
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5X11Extras)
 
-
 %description
 nx-firewall is a small and easy to use KCM Firewall for Plasma 5.
 
@@ -37,8 +36,6 @@ nx-firewall is a small and easy to use KCM Firewall for Plasma 5.
 export CFLAGS="$RPM_OPT_FLAGS -Wno-error=deprecated-declarations"
 export CFLAGS="$RPM_OPT_FLAGS -Wno-error=inconsistent-missing-override"
 
-#export CC=gcc
-#export CXX=g++
 %cmake  -DCMAKE_BUILD_TYPE=Release \
         -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
         
@@ -47,10 +44,9 @@ export CFLAGS="$RPM_OPT_FLAGS -Wno-error=inconsistent-missing-override"
 %install
 %make_install -C build
 
-
 %files
-%{_libdir}/libexec/__pycache__/nomad_ufw_plugin_helper.cpython-37.opt-1.pyc
-%{_libdir}/libexec/__pycache__/nomad_ufw_plugin_helper.cpython-37.pyc
+%{_libdir}/libexec/__pycache__/nomad_ufw_plugin_helper.cpython-*.opt-1.pyc
+%{_libdir}/libexec/__pycache__/nomad_ufw_plugin_helper.cpython-*.pyc
 %{_libdir}/libexec/kauth/nomad_ufw_plugin_helper
 %{_libdir}/libexec/kauth/nxos_netstat_helper
 %{_libdir}/libexec/nomad_ufw_plugin_helper.py
