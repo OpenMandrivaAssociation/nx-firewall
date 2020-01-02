@@ -2,7 +2,7 @@
 
 Name:           nx-firewall
 Version:        0.4.1
-Release:        1.git.2019.11.18
+Release:        2.git.2019.11.18
 Summary:        Plasma 5 Firewall KCM
 Group:          System/Base
 License:        GPLv3+
@@ -24,6 +24,8 @@ BuildRequires:  python-devel
 BuildRequires:  qt5-qtbase-devel
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5X11Extras)
+
+Requires:       ufw
 
 %description
 nx-firewall is a small and easy to use KCM Firewall for Plasma 5.
