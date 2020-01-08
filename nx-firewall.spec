@@ -36,7 +36,7 @@ export CFLAGS="%{optflags} -Wno-error=deprecated-declarations"
 export CFLAGS="%{optflags} -Wno-error=inconsistent-missing-override"
 
 %cmake_kde5
-%make_build
+%make_build -C build
 
 %install
 %make_install -C build
