@@ -11,6 +11,7 @@ URL:		https://github.com/nx-desktop/nx-firewall
 Source0:	%{name}-master-%{snap}.zip
 Patch0:		nx-firewall-werror.patch
 BuildRequires:	cmake
+BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5KCMUtils)
@@ -36,10 +37,10 @@ export CFLAGS="%{optflags} -Wno-error=deprecated-declarations"
 export CFLAGS="%{optflags} -Wno-error=inconsistent-missing-override"
 
 %cmake_kde5
-%make_build -C build
+%ninja_build
 
 %install
-%make_install -C build
+%ninja_install -C build
 
 %files
 %{_libdir}/libexec/__pycache__/*.pyc
