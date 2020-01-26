@@ -1,0 +1,15 @@
+diff -up nx-firewall-master/kcm/org_nxos_firewall.desktop.omv~ nx-firewall-master/kcm/org_nxos_firewall.desktop
+--- nx-firewall-master/kcm/org_nxos_firewall.desktop.omv~	2020-01-26 19:41:54.615422989 +0100
++++ nx-firewall-master/kcm/org_nxos_firewall.desktop	2020-01-26 19:45:39.965412056 +0100
+@@ -11,7 +11,7 @@ X-KDE-Weight=80
+ X-DocPath=kcontrol5/org.nxos.firewall/index.html
+ 
+ 
+-Name=NX Firewall
+-Comment=NX Firewall - Secure your workstation!
++Name=Firewall
++Comment=Set up a firewall and monitor network connections
+ X-KDE-Keywords=firewall, network, security
+-Categories=Qt;KDE;X-KDE-settings-looknfeel;
++Categories=Qt;KDE;Settings;
+diff -up nx-firewall-master/kcm/package/metadata.desktop.omv~ nx-firewall-master/kcm/package/metadata.desktop
