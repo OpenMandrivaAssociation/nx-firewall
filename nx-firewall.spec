@@ -2,7 +2,7 @@
 
 Name:		nx-firewall
 Version:	0.4.1
-Release:	3.git.%{snap}.2
+Release:	3.git.%{snap}.3
 Summary:	Plasma 5 Firewall KCM
 Group:		System/Base
 License:	GPLv3+
