@@ -20,17 +20,41 @@ BuildRequires:	cmake(KF5Plasma)
 BuildRequires:	cmake(KF5PlasmaQuick)
 BuildRequires:	cmake(KF5Declarative)
 BuildRequires:	cmake(KF5KDELibs4Support)
+BuildRequires:	cmake(KF5Auth)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(Qt5QmlModels)
+BuildRequires:	cmake(KF5Archive)
+BuildRequires:	cmake(KF5Crash)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5Emoticons)
+BuildRequires:	cmake(KF5GuiAddons)
+BuildRequires:	cmake(KF5ItemModels)
+BuildRequires:	cmake(KF5Bookmarks)
+BuildRequires:	cmake(KF5JobWidgets)
+BuildRequires:	cmake(KF5Solid)
+BuildRequires:	cmake(KF5Codecs)
+BuildRequires:	cmake(KF5Sonnet)
+BuildRequires:	cmake(KF5TextWidgets)
+BuildRequires:	cmake(KF5UnitConversion)
+BuildRequires:	cmake(KF5Service)
+BuildRequires:	cmake(KF5Package)
 BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(Qt5Qml)
 BuildRequires:	pkgconfig(Qt5X11Extras)
+# So cmake can find the correct path for netstat, ufw and iptables
+BuildRequires:	net-tools
+BuildRequires:	ufw
+BuildRequires:	iptables
+# For netstat
+Requires:	net-tools
 Requires:	ufw
 
 %description
 nx-firewall is a small and easy to use KCM Firewall for Plasma 5.
 
 %prep
-%setup -qn %{name}-master
-%autopatch -p0
+%autosetup -p0 -n %{name}-master
 
 %build
 export CFLAGS="%{optflags} -Wno-error=deprecated-declarations"
