@@ -68,7 +68,6 @@ export CFLAGS="%{optflags} -Wno-error=inconsistent-missing-override"
 %ninja_install -C build
 
 %files
-%{_libdir}/libexec/__pycache__/*.pyc
 %{_libdir}/libexec/kauth/nomad_ufw_plugin_helper
 %{_libdir}/libexec/kauth/nxos_netstat_helper
 %{_libdir}/libexec/nomad_ufw_plugin_helper.py
