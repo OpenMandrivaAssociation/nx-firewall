@@ -1,8 +1,8 @@
-%define snap 2019.11.18
+%define snap 2020.05.18
 
 Name:		nx-firewall
 Version:	0.4.1
-Release:	3.git.%{snap}.3
+Release:	3.git.%{snap}.4
 Summary:	Plasma 5 Firewall KCM
 Group:		System/Base
 License:	GPLv3+
