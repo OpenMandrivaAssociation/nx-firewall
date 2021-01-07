@@ -2,7 +2,7 @@
 
 Name:		nx-firewall
 Version:	0.4.1
-Release:	3.git.%{snap}.5
+Release:	3.git.%{snap}.6
 Summary:	Plasma 5 Firewall KCM
 Group:		System/Base
 License:	GPLv3+
@@ -11,6 +11,9 @@ URL:		https://github.com/nx-desktop/nx-firewall
 Source0:	%{name}-master-%{snap}.zip
 Patch0:		nx-firewall-werror.patch
 Patch1:		nx-firewall-desktopfile.patch
+# Revert https://github.com/nx-desktop/nx-firewall/commit/2d5dc7c6fb6ea4fce7844d7a18d51308456c9ac9
+# since it breaks the UI
+Patch2:		revert-2d5dc7c6fb6ea4fce7844d7a18d51308456c9ac9.patch
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
